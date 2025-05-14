@@ -17,22 +17,22 @@ if (typeof window !== 'undefined') {
 
 export default function WhyUsPage() {
   const featuresRef = useRef(null);
-  
+
   // Animation on component mount
   useEffect(() => {
     if (!featuresRef.current) return;
-    
+
     gsap.fromTo(
       featuresRef.current.querySelectorAll('.feature-card'),
-      { 
-        opacity: 0, 
-        y: 50 
+      {
+        opacity: 0,
+        y: 50
       },
-      { 
-        opacity: 1, 
-        y: 0, 
+      {
+        opacity: 1,
+        y: 0,
         stagger: 0.2,
-        duration: 0.8, 
+        duration: 0.8,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: featuresRef.current,
@@ -42,7 +42,7 @@ export default function WhyUsPage() {
       }
     );
   }, []);
-  
+
   // Features data
   const features = [
     {
@@ -101,7 +101,7 @@ export default function WhyUsPage() {
       )
     }
   ];
-  
+
   // Comparison data
   const comparison = [
     {
@@ -118,22 +118,22 @@ export default function WhyUsPage() {
     },
     {
       traditional: 'Limited to visible listings',
-      bestzdeal: 'Access to sellers' complete inventory'
+      bestzdeal: "Access to sellers' complete inventory"
     },
     {
       traditional: 'Seller-driven marketplace',
       bestzdeal: 'Buyer-centric platform'
     }
   ];
-  
+
   return (
     <div className="min-h-screen">
       {/* Background effect */}
       <ParticleField count={30} color="#4F46E5" />
-      
+
       {/* Navigation */}
       <Navbar />
-      
+
       {/* Main content */}
       <main className="pt-24 pb-16">
         {/* Hero section */}
@@ -154,14 +154,14 @@ export default function WhyUsPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Features section */}
         <section ref={featuresRef} className="py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
               Our Unique Features
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <Card
@@ -179,14 +179,14 @@ export default function WhyUsPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Comparison section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
               BestzDeal vs. Traditional Shopping
             </h2>
-            
+
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 <div className="bg-white p-4 rounded-t-lg md:rounded-t-none md:rounded-tl-lg font-bold text-center text-gray-700 border-b md:border-b-0 md:border-r border-gray-200">
@@ -196,7 +196,7 @@ export default function WhyUsPage() {
                   BestzDeal
                 </div>
               </div>
-              
+
               {comparison.map((item, index) => (
                 <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div className="bg-white p-4 flex items-center">
@@ -213,7 +213,7 @@ export default function WhyUsPage() {
                   </div>
                 </div>
               ))}
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-b-lg md:rounded-b-none md:rounded-bl-lg flex items-center justify-center">
                   <Button href="/demo" variant="secondary">
@@ -229,14 +229,14 @@ export default function WhyUsPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Stats section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
               The BestzDeal Advantage
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="p-6 text-center">
                 <div className="text-4xl font-bold text-indigo-600 mb-2">85%</div>
@@ -253,7 +253,7 @@ export default function WhyUsPage() {
             </div>
           </div>
         </section>
-        
+
         {/* CTA section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-cyan-500">
           <div className="container mx-auto px-4">
@@ -272,7 +272,7 @@ export default function WhyUsPage() {
           </div>
         </section>
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>
