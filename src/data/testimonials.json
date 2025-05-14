@@ -1,0 +1,50 @@
+[
+  {
+    "id": "testimonial-001",
+    "name": "Sarah Johnson",
+    "role": "Frequent Online Shopper",
+    "avatar": "/images/buyer.jpg",
+    "content": "BestzDeal completely changed how I shop online. Instead of spending hours comparing prices, I just post what I need and sellers come to me with their best offers. I saved over $300 on my new laptop!",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-002",
+    "name": "Michael Chen",
+    "role": "Tech Enthusiast",
+    "avatar": "/images/buyer.jpg",
+    "content": "As someone who's always looking for the latest gadgets, BestzDeal has been a game-changer. The AI matching is incredibly accurate, and I love watching sellers compete to give me the best price.",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-003",
+    "name": "Emma Rodriguez",
+    "role": "Busy Professional",
+    "avatar": "/images/buyer.jpg",
+    "content": "With my hectic schedule, I don't have time to shop around. BestzDeal lets me post exactly what I want and choose from multiple offers. The time savings alone is worth it!",
+    "rating": 4
+  },
+  {
+    "id": "testimonial-004",
+    "name": "David Thompson",
+    "role": "Small Business Owner",
+    "avatar": "/images/seller.jpg",
+    "content": "As a seller, BestzDeal has transformed my business. Instead of hoping customers find my products, I can directly bid on requests from buyers who are ready to purchase. My conversion rate has doubled!",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-005",
+    "name": "Jessica Kim",
+    "role": "Fashion Retailer",
+    "avatar": "/images/seller.jpg",
+    "content": "The BestzDeal platform connects me with customers who are specifically looking for what I sell. The detailed request system means I can make targeted offers that have a much higher acceptance rate.",
+    "rating": 4
+  },
+  {
+    "id": "testimonial-006",
+    "name": "Robert Patel",
+    "role": "Electronics Dealer",
+    "avatar": "/images/seller.jpg",
+    "content": "I've been in e-commerce for 15 years, and BestzDeal is the most innovative marketplace I've seen. The reverse auction model creates a fair playing field where quality and price truly matter.",
+    "rating": 5
+  }
+]

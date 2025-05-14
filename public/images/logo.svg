@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- "B" stylized as a price tag -->
+  <path d="M30 10C30 7.79086 28.2091 6 26 6H14C11.7909 6 10 7.79086 10 10V40C10 42.2091 11.7909 44 14 44H26C28.2091 44 30 42.2091 30 40V30C30 27.7909 28.2091 26 26 26H22V24H26C28.2091 24 30 22.2091 30 20V10Z" fill="url(#logoGradient)"/>
+  <path d="M22 14H18V20H22C23.1046 20 24 19.1046 24 18V16C24 14.8954 23.1046 14 22 14Z" fill="white"/>
+  <path d="M22 30H18V36H22C23.1046 36 24 35.1046 24 34V32C24 30.8954 23.1046 30 22 30Z" fill="white"/>
+  
+  <!-- Deal icon -->
+  <path d="M45 25C45 21.6863 47.6863 19 51 19H55C58.3137 19 61 21.6863 61 25C61 28.3137 58.3137 31 55 31H51C47.6863 31 45 28.3137 45 25Z" fill="url(#logoGradient)"/>
+  <path d="M53 19L53 31" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M49 23L57 27" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M49 27L57 23" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Text "estz" -->
+  <path d="M70 19H78C79.1046 19 80 19.8954 80 21V23C80 24.1046 79.1046 25 78 25H72V27H78C79.1046 27 80 27.8954 80 29V31C80 32.1046 79.1046 33 78 33H70C68.8954 33 68 32.1046 68 31V21C68 19.8954 68.8954 19 70 19Z" fill="url(#logoGradient)"/>
+  <path d="M84 19H92C93.1046 19 94 19.8954 94 21V31C94 32.1046 93.1046 33 92 33H84C82.8954 33 82 32.1046 82 31V21C82 19.8954 82.8954 19 84 19Z" fill="url(#logoGradient)"/>
+  <path d="M88 23V29" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M98 19H106C107.105 19 108 19.8954 108 21V31C108 32.1046 107.105 33 106 33H98C96.8954 33 96 32.1046 96 31V21C96 19.8954 96.8954 19 98 19Z" fill="url(#logoGradient)"/>
+  <path d="M102 23V29" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M98 26H106" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M112 19H120C121.105 19 122 19.8954 122 21V31C122 32.1046 121.105 33 120 33H112C110.895 33 110 32.1046 110 31V21C110 19.8954 110.895 19 112 19Z" fill="url(#logoGradient)"/>
+  <path d="M112 26H120" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M112 23H120" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M112 29H120" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Text "Deal" -->
+  <path d="M126 19H134C135.105 19 136 19.8954 136 21V31C136 32.1046 135.105 33 134 33H126C124.895 33 124 32.1046 124 31V21C124 19.8954 124.895 19 126 19Z" fill="url(#logoGradient)"/>
+  <path d="M126 19H134V26H126V19Z" fill="white"/>
+  <path d="M140 19H148C149.105 19 150 19.8954 150 21V31C150 32.1046 149.105 33 148 33H140C138.895 33 138 32.1046 138 31V21C138 19.8954 138.895 19 140 19Z" fill="url(#logoGradient)"/>
+  <path d="M140 26H148" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M154 19H162C163.105 19 164 19.8954 164 21V31C164 32.1046 163.105 33 162 33H154C152.895 33 152 32.1046 152 31V21C152 19.8954 152.895 19 154 19Z" fill="url(#logoGradient)"/>
+  <path d="M154 19H162V26H154V19Z" fill="white"/>
+  <path d="M168 19H176C177.105 19 178 19.8954 178 21V31C178 32.1046 177.105 33 176 33H168C166.895 33 166 32.1046 166 31V21C166 19.8954 166.895 19 168 19Z" fill="url(#logoGradient)"/>
+  <path d="M168 19V33" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M168 19H176" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M168 26H174" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M168 33H176" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Sparkle effects -->
+  <circle cx="190" cy="15" r="2" fill="white"/>
+  <circle cx="185" cy="25" r="1.5" fill="white"/>
+  <circle cx="195" cy="30" r="1" fill="white"/>
+  <circle cx="40" cy="15" r="1" fill="white"/>
+  <circle cx="35" cy="30" r="1.5" fill="white"/>
+</svg>

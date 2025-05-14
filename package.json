@@ -1,0 +1,30 @@
+{
+  "name": "bestzdeal",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://hunterho07.github.io/d21-i3-BestzDeal/",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.0.7",
+    "@react-three/fiber": "^9.1.2",
+    "framer-motion": "^12.11.3",
+    "gsap": "^3.13.0",
+    "lottie-react": "^2.4.1",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4"
+  }
+}

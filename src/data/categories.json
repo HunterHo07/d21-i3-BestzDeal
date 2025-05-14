@@ -1,0 +1,114 @@
+[
+  {
+    "id": "electronics",
+    "name": "Electronics",
+    "icon": "DevicePhoneMobileIcon",
+    "subcategories": [
+      "Smartphones",
+      "Laptops",
+      "Tablets",
+      "Cameras",
+      "Audio",
+      "Wearables",
+      "Gaming"
+    ]
+  },
+  {
+    "id": "fashion",
+    "name": "Fashion",
+    "icon": "ShoppingBagIcon",
+    "subcategories": [
+      "Men's Clothing",
+      "Women's Clothing",
+      "Shoes",
+      "Accessories",
+      "Watches",
+      "Jewelry",
+      "Bags"
+    ]
+  },
+  {
+    "id": "home",
+    "name": "Home & Garden",
+    "icon": "HomeIcon",
+    "subcategories": [
+      "Furniture",
+      "Decor",
+      "Kitchen",
+      "Bedding",
+      "Appliances",
+      "Garden",
+      "Tools"
+    ]
+  },
+  {
+    "id": "beauty",
+    "name": "Beauty & Health",
+    "icon": "SparklesIcon",
+    "subcategories": [
+      "Skincare",
+      "Makeup",
+      "Haircare",
+      "Fragrances",
+      "Personal Care",
+      "Health Supplements",
+      "Wellness"
+    ]
+  },
+  {
+    "id": "sports",
+    "name": "Sports & Outdoors",
+    "icon": "TrophyIcon",
+    "subcategories": [
+      "Fitness Equipment",
+      "Sportswear",
+      "Outdoor Gear",
+      "Camping",
+      "Bicycles",
+      "Water Sports",
+      "Team Sports"
+    ]
+  },
+  {
+    "id": "toys",
+    "name": "Toys & Kids",
+    "icon": "GiftIcon",
+    "subcategories": [
+      "Action Figures",
+      "Educational Toys",
+      "Board Games",
+      "Outdoor Play",
+      "Baby Products",
+      "Kids Furniture",
+      "School Supplies"
+    ]
+  },
+  {
+    "id": "automotive",
+    "name": "Automotive",
+    "icon": "TruckIcon",
+    "subcategories": [
+      "Car Accessories",
+      "Motorcycle Parts",
+      "Tools & Equipment",
+      "Car Electronics",
+      "Exterior Accessories",
+      "Interior Accessories",
+      "Oils & Fluids"
+    ]
+  },
+  {
+    "id": "books",
+    "name": "Books & Media",
+    "icon": "BookOpenIcon",
+    "subcategories": [
+      "Fiction",
+      "Non-Fiction",
+      "Textbooks",
+      "Magazines",
+      "E-Books",
+      "Audiobooks",
+      "Movies & TV"
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "req-001",
+    "title": "iPhone 15 Pro Max 256GB",
+    "category": "electronics",
+    "subcategory": "Smartphones",
+    "description": "Looking for a new iPhone 15 Pro Max with 256GB storage in Space Black. Must be unlocked and include original accessories. Willing to consider both new and mint condition refurbished.",
+    "budget": {
+      "min": 900,
+      "max": 1100
+    },
+    "location": "United States",
+    "delivery": "Shipping",
+    "urgency": "Within 2 weeks",
+    "created_at": "2023-05-10T14:23:00Z",
+    "status": "active",
+    "offers": 7,
+    "best_offer": 949.99,
+    "image": "/images/buyer.jpg"
+  },
+  {
+    "id": "req-002",
+    "title": "Sony WH-1000XM5 Headphones",
+    "category": "electronics",
+    "subcategory": "Audio",
+    "description": "I'm looking for Sony WH-1000XM5 noise-cancelling headphones. Prefer new in box, but will consider open-box items if they're in perfect condition with full warranty. Color preference: black.",
+    "budget": {
+      "min": 300,
+      "max": 380
+    },
+    "location": "Canada",
+    "delivery": "Shipping",
+    "urgency": "No rush",
+    "created_at": "2023-05-11T09:45:00Z",
+    "status": "active",
+    "offers": 5,
+    "best_offer": 329.99,
+    "image": "/images/buyer.jpg"
+  },
+  {
+    "id": "req-003",
+    "title": "Ergonomic Office Chair",
+    "category": "home",
+    "subcategory": "Furniture",
+    "description": "Need a high-quality ergonomic office chair for home office. Must have adjustable lumbar support, height adjustment, and breathable mesh back. Looking for brands like Herman Miller, Steelcase, or similar quality.",
+    "budget": {
+      "min": 400,
+      "max": 800
+    },
+    "location": "United Kingdom",
+    "delivery": "Shipping or local pickup",
+    "urgency": "Within 1 month",
+    "created_at": "2023-05-09T16:12:00Z",
+    "status": "active",
+    "offers": 9,
+    "best_offer": 549.99,
+    "image": "/images/buyer.jpg"
+  },
+  {
+    "id": "req-004",
+    "title": "Nike Air Jordan 1 High OG",
+    "category": "fashion",
+    "subcategory": "Shoes",
+    "description": "Looking for Nike Air Jordan 1 High OG 'Chicago' or 'Bred' colorway. Size US 10.5. New in box only. Must be authentic with proof of purchase.",
+    "budget": {
+      "min": 200,
+      "max": 350
+    },
+    "location": "Australia",
+    "delivery": "Shipping with tracking",
+    "urgency": "Within 3 weeks",
+    "created_at": "2023-05-12T11:30:00Z",
+    "status": "active",
+    "offers": 3,
+    "best_offer": 289.99,
+    "image": "/images/buyer.jpg"
+  },
+  {
+    "id": "req-005",
+    "title": "DSLR Camera with Lens Kit",
+    "category": "electronics",
+    "subcategory": "Cameras",
+    "description": "I'm an amateur photographer looking for a mid-range DSLR camera with lens kit. Prefer Canon or Nikon. Must be in excellent condition with low shutter count if used. Would like at least one zoom lens included.",
+    "budget": {
+      "min": 600,
+      "max": 1200
+    },
+    "location": "Germany",
+    "delivery": "Insured shipping",
+    "urgency": "Within 1 month",
+    "created_at": "2023-05-08T13:20:00Z",
+    "status": "active",
+    "offers": 6,
+    "best_offer": 849.99,
+    "image": "/images/buyer.jpg"
+  }
+]
