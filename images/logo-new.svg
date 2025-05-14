@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- B -->
+  <path d="M15 5C15 3.34315 16.3431 2 18 2H27C28.6569 2 30 3.34315 30 5V15C30 16.6569 28.6569 18 27 18H25V22H27C28.6569 22 30 23.3431 30 25V35C30 36.6569 28.6569 38 27 38H18C16.3431 38 15 36.6569 15 35V5Z" fill="url(#logoGradient)"/>
+  <path d="M21 10H24C25.1046 10 26 10.8954 26 12V14C26 15.1046 25.1046 16 24 16H21V10Z" fill="white"/>
+  <path d="M21 24H24C25.1046 24 26 24.8954 26 26V28C26 29.1046 25.1046 30 24 30H21V24Z" fill="white"/>
+  
+  <!-- estz -->
+  <path d="M40 15H55C56.1046 15 57 15.8954 57 17V19C57 20.1046 56.1046 21 55 21H44V23H55C56.1046 23 57 23.8954 57 25V27C57 28.1046 56.1046 29 55 29H40C38.8954 29 38 28.1046 38 27V17C38 15.8954 38.8954 15 40 15Z" fill="url(#logoGradient)"/>
+  
+  <path d="M65 15H75C76.1046 15 77 15.8954 77 17V27C77 28.1046 76.1046 29 75 29H65C63.8954 29 63 28.1046 63 27V17C63 15.8954 63.8954 15 65 15Z" fill="url(#logoGradient)"/>
+  <path d="M70 19V25" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <path d="M85 15H95C96.1046 15 97 15.8954 97 17V27C97 28.1046 96.1046 29 95 29H85C83.8954 29 83 28.1046 83 27V17C83 15.8954 83.8954 15 85 15Z" fill="url(#logoGradient)"/>
+  <path d="M90 19V25" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M85 22H95" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <path d="M105 15H115C116.105 15 117 15.8954 117 17V27C117 28.1046 116.105 29 115 29H105C103.895 29 103 28.1046 103 27V17C103 15.8954 103.895 15 105 15Z" fill="url(#logoGradient)"/>
+  <path d="M105 22H115" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M105 19H115" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M105 25H115" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Deal -->
+  <path d="M125 15H135C136.105 15 137 15.8954 137 17V27C137 28.1046 136.105 29 135 29H125C123.895 29 123 28.1046 123 27V17C123 15.8954 123.895 15 125 15Z" fill="url(#logoGradient)"/>
+  <path d="M125 15H135V22H125V15Z" fill="white"/>
+  
+  <path d="M145 15H155C156.105 15 157 15.8954 157 17V27C157 28.1046 156.105 29 155 29H145C143.895 29 143 28.1046 143 27V17C143 15.8954 143.895 15 145 15Z" fill="url(#logoGradient)"/>
+  <path d="M145 22H155" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <path d="M165 15H175C176.105 15 177 15.8954 177 17V27C177 28.1046 176.105 29 175 29H165C163.895 29 163 28.1046 163 27V17C163 15.8954 163.895 15 165 15Z" fill="url(#logoGradient)"/>
+  <path d="M165 15H175V22H165V15Z" fill="white"/>
+  
+  <path d="M185 15H195C196.105 15 197 15.8954 197 17V27C197 28.1046 196.105 29 195 29H185C183.895 29 183 28.1046 183 27V17C183 15.8954 183.895 15 185 15Z" fill="url(#logoGradient)"/>
+  <path d="M185 15V29" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M185 15H195" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M185 22H191" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M185 29H195" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
