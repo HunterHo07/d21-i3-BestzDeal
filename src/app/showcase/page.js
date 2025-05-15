@@ -24,22 +24,22 @@ if (typeof window !== 'undefined') {
 export default function ShowcasePage() {
   const showcaseRef = useRef(null);
   const [activeTab, setActiveTab] = useState('buyers');
-  
+
   // Animation on component mount
   useEffect(() => {
     if (!showcaseRef.current) return;
-    
+
     gsap.fromTo(
       showcaseRef.current.querySelectorAll('.animate-in'),
-      { 
-        opacity: 0, 
-        y: 30 
+      {
+        opacity: 0,
+        y: 30
       },
-      { 
-        opacity: 1, 
-        y: 0, 
+      {
+        opacity: 1,
+        y: 0,
         stagger: 0.2,
-        duration: 0.8, 
+        duration: 0.8,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: showcaseRef.current,
@@ -49,25 +49,25 @@ export default function ShowcasePage() {
       }
     );
   }, []);
-  
+
   // Filter offers by request
   const getOffersForRequest = (requestId) => {
     return offersData.filter(offer => offer.request_id === requestId);
   };
-  
+
   // Get seller by ID
   const getSellerById = (sellerId) => {
     return sellersData.find(seller => seller.id === sellerId);
   };
-  
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Background effect */}
       <ParticleField count={30} color="#4F46E5" />
-      
+
       {/* Navigation */}
       <Navbar />
-      
+
       {/* Main content */}
       <main className="pt-24 pb-16">
         {/* Hero section */}
@@ -84,7 +84,7 @@ export default function ShowcasePage() {
             </div>
           </div>
         </section>
-        
+
         {/* Showcase section */}
         <section ref={showcaseRef} className="py-20">
           <div className="container mx-auto px-4">
@@ -115,14 +115,14 @@ export default function ShowcasePage() {
                 </button>
               </div>
             </div>
-            
+
             {/* Buyers showcase */}
             {activeTab === 'buyers' && (
               <div className="space-y-16">
-                <h2 className="text-3xl font-bold text-center mb-12 animate-in">
+                <h2 className="text-3xl font-bold text-center text-white mb-12 animate-in">
                   How Buyers Save Time and Money
                 </h2>
-                
+
                 {requestsData.slice(0, 3).map((request, index) => (
                   <div key={request.id} className="animate-in">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -137,6 +137,9 @@ export default function ShowcasePage() {
                               width={48}
                               height={48}
                               className="object-cover"
+                              onError={(e) => {
+                                e.target.src = '/images/buyer.jpg';
+                              }}
                             />
                           </div>
                           <div>
@@ -146,7 +149,7 @@ export default function ShowcasePage() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className="space-y-3 mb-4">
                           <div>
                             <div className="text-sm text-gray-500">Product</div>
@@ -167,7 +170,7 @@ export default function ShowcasePage() {
                             <div className="text-gray-700">{request.description}</div>
                           </div>
                         </div>
-                        
+
                         <div className="bg-indigo-50 p-3 rounded-lg">
                           <div className="flex justify-between">
                             <div>
@@ -187,16 +190,16 @@ export default function ShowcasePage() {
                           </div>
                         </div>
                       </Card>
-                      
+
                       {/* Offers */}
                       <div className="lg:col-span-2 space-y-4">
                         <h3 className="text-xl font-bold mb-4">Seller Offers</h3>
-                        
+
                         {getOffersForRequest(request.id).slice(0, 3).map((offer, offerIndex) => {
                           const seller = getSellerById(offer.seller_id);
                           return (
-                            <Card 
-                              key={offer.id} 
+                            <Card
+                              key={offer.id}
                               className={`p-4 ${offerIndex === 0 ? 'border-2 border-green-500' : ''}`}
                             >
                               <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
@@ -208,6 +211,9 @@ export default function ShowcasePage() {
                                       width={40}
                                       height={40}
                                       className="object-cover"
+                                      onError={(e) => {
+                                        e.target.src = '/images/seller.jpg';
+                                      }}
                                     />
                                   </div>
                                   <div>
@@ -229,9 +235,9 @@ export default function ShowcasePage() {
                                   </div>
                                 </div>
                               </div>
-                              
+
                               <p className="text-gray-700 text-sm mb-3">{offer.description}</p>
-                              
+
                               <div className="grid grid-cols-3 gap-2 text-xs">
                                 <div>
                                   <div className="text-gray-500">Condition</div>
@@ -246,7 +252,7 @@ export default function ShowcasePage() {
                                   <div>{offer.warranty}</div>
                                 </div>
                               </div>
-                              
+
                               {offerIndex === 0 && (
                                 <div className="mt-3 text-xs text-green-600 font-medium">
                                   Best offer - {Math.round(((request.budget.max - offer.price) / request.budget.max) * 100)}% below maximum budget
@@ -257,13 +263,13 @@ export default function ShowcasePage() {
                         })}
                       </div>
                     </div>
-                    
+
                     {index < requestsData.slice(0, 3).length - 1 && (
                       <div className="border-b border-gray-200 my-12"></div>
                     )}
                   </div>
                 ))}
-                
+
                 <div className="text-center animate-in">
                   <Button href="/demo" size="lg">
                     Try It Yourself
@@ -271,14 +277,14 @@ export default function ShowcasePage() {
                 </div>
               </div>
             )}
-            
+
             {/* Sellers showcase */}
             {activeTab === 'sellers' && (
               <div className="space-y-16">
-                <h2 className="text-3xl font-bold text-center mb-12 animate-in">
+                <h2 className="text-3xl font-bold text-center text-white mb-12 animate-in">
                   How Sellers Grow Their Business
                 </h2>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in">
                   {sellersData.slice(0, 6).map((seller) => (
                     <Card key={seller.id} className="p-6" hoverEffect={true}>
@@ -290,6 +296,9 @@ export default function ShowcasePage() {
                             width={48}
                             height={48}
                             className="object-cover"
+                            onError={(e) => {
+                              e.target.src = '/images/seller.jpg';
+                            }}
                           />
                         </div>
                         <div>
@@ -302,14 +311,14 @@ export default function ShowcasePage() {
                           </div>
                         </div>
                       </div>
-                      
+
                       <div className="space-y-3 mb-4">
                         <div>
                           <div className="text-sm text-gray-500">Categories</div>
                           <div className="flex flex-wrap gap-1 mt-1">
                             {seller.categories.map((category) => (
-                              <span 
-                                key={category} 
+                              <span
+                                key={category}
                                 className="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full"
                               >
                                 {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -326,7 +335,7 @@ export default function ShowcasePage() {
                           <div className="font-medium">{seller.response_time}</div>
                         </div>
                       </div>
-                      
+
                       <div className="bg-indigo-50 p-3 rounded-lg">
                         <div className="grid grid-cols-2 gap-2">
                           <div>
@@ -342,7 +351,7 @@ export default function ShowcasePage() {
                     </Card>
                   ))}
                 </div>
-                
+
                 <div className="bg-indigo-50 rounded-lg p-8 animate-in">
                   <h3 className="text-2xl font-bold mb-4">Seller Benefits</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -400,7 +409,7 @@ export default function ShowcasePage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="text-center animate-in">
                   <Button href="/demo" size="lg">
                     See How It Works
@@ -411,7 +420,7 @@ export default function ShowcasePage() {
           </div>
         </section>
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>

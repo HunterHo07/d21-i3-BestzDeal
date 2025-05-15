@@ -151,7 +151,7 @@ export default function DemoPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Background effect */}
       <ParticleField count={30} color="#4F46E5" />
 
@@ -163,10 +163,10 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               BestzDeal Demo
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Experience how BestzDeal works. Post a request, watch AI match with sellers,
               and see competitive offers roll in.
             </p>
@@ -209,7 +209,7 @@ export default function DemoPage() {
             {/* Step 1: Basic Request Info */}
             {step === 1 && (
               <Card className="p-6 md:p-8">
-                <h2 className="text-xl font-bold mb-6">What are you looking to buy?</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-6">What are you looking to buy?</h2>
                 <form onSubmit={handleSubmit}>
                   <div className="space-y-6">
                     <div>
@@ -240,7 +240,7 @@ export default function DemoPage() {
                             className={`p-3 border rounded-md text-center transition-colors ${
                               formData.category === category.id
                                 ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
-                                : 'border-gray-300 hover:border-indigo-300'
+                                : 'border-gray-300 hover:border-indigo-300 text-gray-700 bg-white'
                             }`}
                           >
                             {category.name}

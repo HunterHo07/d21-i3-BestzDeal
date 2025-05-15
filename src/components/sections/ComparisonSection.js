@@ -198,6 +198,10 @@ export default function ComparisonSection() {
                 alt="Traditional Shopping"
                 fill
                 className="object-cover"
+                onError={(e) => {
+                  console.error("Failed to load comparison image");
+                  e.target.style.display = 'none';
+                }}
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg max-w-xs text-center">
@@ -238,6 +242,10 @@ export default function ComparisonSection() {
                 alt="BestzDeal Shopping"
                 fill
                 className="object-cover"
+                onError={(e) => {
+                  console.error("Failed to load AI matching image");
+                  e.target.style.display = 'none';
+                }}
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg max-w-xs text-center">
