@@ -11,16 +11,16 @@ import { useApp } from '@/context/AppContext';
 import { formatPrice, timeAgo } from '@/lib/utils';
 
 export default function DemoPage() {
-  const { 
-    categories, 
-    createRequest, 
-    generateOffers, 
+  const {
+    categories,
+    createRequest,
+    generateOffers,
     acceptOffer,
     activeRequest,
     activeOffers,
     loading
   } = useApp();
-  
+
   // Form state
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -36,11 +36,11 @@ export default function DemoPage() {
     delivery: 'Shipping',
     urgency: 'No rush'
   });
-  
+
   // Selected category and subcategories
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [subcategories, setSubcategories] = useState([]);
-  
+
   // Handle category change
   const handleCategoryChange = (categoryId) => {
     const category = categories.find(c => c.id === categoryId);
@@ -52,11 +52,11 @@ export default function DemoPage() {
       subcategory: ''
     }));
   };
-  
+
   // Handle form input change
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    
+
     if (name === 'min' || name === 'max') {
       setFormData(prev => ({
         ...prev,
@@ -72,18 +72,18 @@ export default function DemoPage() {
       }));
     }
   };
-  
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (step === 1) {
       // Validate first step
       if (!formData.title || !formData.category || !formData.subcategory) {
         alert('Please fill in all required fields');
         return;
       }
-      
+
       setStep(2);
     } else if (step === 2) {
       // Validate second step
@@ -91,14 +91,14 @@ export default function DemoPage() {
         alert('Please enter a valid budget range');
         return;
       }
-      
+
       try {
         // Create request
         await createRequest({
           ...formData,
           image: '/images/buyer.jpg' // Dummy image
         });
-        
+
         // Move to next step
         setStep(3);
       } catch (error) {
@@ -109,7 +109,7 @@ export default function DemoPage() {
       try {
         // Generate offers
         await generateOffers(activeRequest.id);
-        
+
         // Move to next step
         setStep(4);
       } catch (error) {
@@ -118,7 +118,7 @@ export default function DemoPage() {
       }
     }
   };
-  
+
   // Handle accepting an offer
   const handleAcceptOffer = async (offerId) => {
     try {
@@ -129,7 +129,7 @@ export default function DemoPage() {
       alert('Failed to accept offer. Please try again.');
     }
   };
-  
+
   // Reset demo
   const resetDemo = () => {
     setStep(1);
@@ -149,21 +149,21 @@ export default function DemoPage() {
     setSelectedCategory(null);
     setSubcategories([]);
   };
-  
+
   return (
     <div className="min-h-screen">
       {/* Background effect */}
       <ParticleField count={30} color="#4F46E5" />
-      
+
       {/* Navigation */}
       <Navbar />
-      
+
       {/* Main content */}
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               BestzDeal Demo
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -171,16 +171,16 @@ export default function DemoPage() {
               and see competitive offers roll in.
             </p>
           </div>
-          
+
           {/* Progress steps */}
           <div className="max-w-4xl mx-auto mb-8">
             <div className="flex items-center justify-between">
               {[1, 2, 3, 4, 5].map((i) => (
                 <div key={i} className="flex flex-col items-center">
-                  <div 
+                  <div
                     className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 ${
-                      step >= i 
-                        ? 'bg-indigo-600 text-white' 
+                      step >= i
+                        ? 'bg-indigo-600 text-white'
                         : 'bg-gray-200 text-gray-500'
                     }`}
                   >
@@ -197,13 +197,13 @@ export default function DemoPage() {
               ))}
             </div>
             <div className="relative h-1 bg-gray-200 mt-4">
-              <div 
+              <div
                 className="absolute h-1 bg-indigo-600 transition-all duration-500"
                 style={{ width: `${(step - 1) * 25}%` }}
               ></div>
             </div>
           </div>
-          
+
           {/* Demo content */}
           <div className="max-w-4xl mx-auto">
             {/* Step 1: Basic Request Info */}
@@ -226,7 +226,7 @@ export default function DemoPage() {
                         required
                       />
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Category*
@@ -248,7 +248,7 @@ export default function DemoPage() {
                         ))}
                       </div>
                     </div>
-                    
+
                     {selectedCategory && (
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -270,7 +270,7 @@ export default function DemoPage() {
                         </select>
                       </div>
                     )}
-                    
+
                     <div className="flex justify-end">
                       <Button type="submit" disabled={loading}>
                         {loading ? 'Loading...' : 'Continue'}
@@ -280,7 +280,7 @@ export default function DemoPage() {
                 </form>
               </Card>
             )}
-            
+
             {/* Step 2: Request Details */}
             {step === 2 && (
               <Card className="p-6 md:p-8">
@@ -299,7 +299,7 @@ export default function DemoPage() {
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 min-h-[100px]"
                       />
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Budget Range*
@@ -339,7 +339,7 @@ export default function DemoPage() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -358,7 +358,7 @@ export default function DemoPage() {
                           <option value="Germany">Germany</option>
                         </select>
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
                           Delivery
@@ -374,7 +374,7 @@ export default function DemoPage() {
                           <option value="Either">Either</option>
                         </select>
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
                           Urgency
@@ -392,11 +392,11 @@ export default function DemoPage() {
                         </select>
                       </div>
                     </div>
-                    
+
                     <div className="flex justify-between">
-                      <Button 
-                        type="button" 
-                        variant="secondary" 
+                      <Button
+                        type="button"
+                        variant="secondary"
                         onClick={() => setStep(1)}
                       >
                         Back
@@ -409,12 +409,12 @@ export default function DemoPage() {
                 </form>
               </Card>
             )}
-            
+
             {/* Step 3: AI Matching */}
             {step === 3 && activeRequest && (
               <Card className="p-6 md:p-8">
                 <h2 className="text-xl font-bold mb-6">AI is matching your request with sellers</h2>
-                
+
                 <div className="mb-8">
                   <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-4 mb-6">
                     <h3 className="font-semibold text-indigo-800 mb-2">Your Request</h3>
@@ -439,18 +439,18 @@ export default function DemoPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex justify-center mb-8">
                     <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center">
                       <div className="w-12 h-12 rounded-full border-4 border-indigo-500 border-t-transparent animate-spin"></div>
                     </div>
                   </div>
-                  
+
                   <div className="text-center space-y-2 mb-8">
                     <p className="text-lg font-medium">Finding the best sellers for your request...</p>
                     <p className="text-gray-500">This usually takes 15-30 seconds</p>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div className="h-full bg-indigo-500 rounded-full animate-pulse w-3/4"></div>
@@ -462,7 +462,7 @@ export default function DemoPage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex justify-center">
                   <Button onClick={handleSubmit} disabled={loading}>
                     {loading ? 'Processing...' : 'Continue to Offers'}
@@ -470,7 +470,7 @@ export default function DemoPage() {
                 </div>
               </Card>
             )}
-            
+
             {/* Step 4: Seller Offers */}
             {step === 4 && activeRequest && activeOffers.length > 0 && (
               <Card className="p-6 md:p-8">
@@ -478,10 +478,10 @@ export default function DemoPage() {
                 <p className="text-gray-500 mb-6">
                   {activeOffers.length} sellers have submitted offers for your request
                 </p>
-                
+
                 <div className="space-y-6">
                   {activeOffers.map((offer, index) => (
-                    <div 
+                    <div
                       key={offer.id}
                       className={`border rounded-lg overflow-hidden ${
                         index === 0 ? 'border-green-500 bg-green-50' : 'border-gray-200'
@@ -523,12 +523,12 @@ export default function DemoPage() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className="mb-4">
                           <h4 className="font-medium mb-2">Offer Details</h4>
                           <p className="text-gray-700">{offer.description}</p>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-sm">
                           <div>
                             <div className="text-gray-500">Condition</div>
@@ -543,7 +543,7 @@ export default function DemoPage() {
                             <div>{offer.warranty}</div>
                           </div>
                         </div>
-                        
+
                         <div className="flex justify-end">
                           <Button
                             onClick={() => handleAcceptOffer(offer.id)}
@@ -559,7 +559,7 @@ export default function DemoPage() {
                 </div>
               </Card>
             )}
-            
+
             {/* Step 5: Completion */}
             {step === 5 && (
               <Card className="p-6 md:p-8 text-center">
@@ -568,13 +568,13 @@ export default function DemoPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                
+
                 <h2 className="text-2xl font-bold mb-2">Deal Accepted!</h2>
                 <p className="text-gray-600 mb-6">
                   You've successfully accepted an offer. In a real scenario, you would now
                   proceed to payment and complete the transaction.
                 </p>
-                
+
                 <div className="max-w-md mx-auto bg-indigo-50 rounded-lg p-4 mb-8">
                   <div className="text-center mb-4">
                     <div className="text-sm text-gray-500">Total Price</div>
@@ -582,7 +582,7 @@ export default function DemoPage() {
                       {formatPrice(activeOffers[0]?.price || 0)}
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <div className="text-gray-500">Seller</div>
@@ -594,7 +594,7 @@ export default function DemoPage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <Button onClick={resetDemo}>
                   Try Another Request
                 </Button>
@@ -603,7 +603,7 @@ export default function DemoPage() {
           </div>
         </div>
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>

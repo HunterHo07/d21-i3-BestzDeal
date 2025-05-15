@@ -2,7 +2,7 @@
   {
     "id": "seller-001",
     "name": "TechDirect",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller1.jpg",
     "rating": 4.8,
     "reviews": 1243,
     "verified": true,
@@ -16,7 +16,7 @@
   {
     "id": "seller-002",
     "name": "FashionHub",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller2.jpg",
     "rating": 4.6,
     "reviews": 876,
     "verified": true,
@@ -30,7 +30,7 @@
   {
     "id": "seller-003",
     "name": "HomeEssentials",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller3.jpg",
     "rating": 4.9,
     "reviews": 2156,
     "verified": true,
@@ -44,7 +44,7 @@
   {
     "id": "seller-004",
     "name": "SportsPro",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller4.jpg",
     "rating": 4.7,
     "reviews": 543,
     "verified": true,
@@ -58,7 +58,7 @@
   {
     "id": "seller-005",
     "name": "GadgetWorld",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller5.jpg",
     "rating": 4.5,
     "reviews": 1876,
     "verified": true,
@@ -72,7 +72,7 @@
   {
     "id": "seller-006",
     "name": "BookWorm",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller6.jpg",
     "rating": 4.9,
     "reviews": 3421,
     "verified": true,
@@ -86,7 +86,7 @@
   {
     "id": "seller-007",
     "name": "AutoParts",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller1.jpg",
     "rating": 4.6,
     "reviews": 987,
     "verified": true,
@@ -100,7 +100,7 @@
   {
     "id": "seller-008",
     "name": "BeautyBox",
-    "logo": "/images/seller.jpg",
+    "logo": "/images/sellers/seller2.jpg",
     "rating": 4.7,
     "reviews": 1532,
     "verified": true,
